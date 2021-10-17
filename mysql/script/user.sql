@@ -1,0 +1,1 @@
+create user 'impacta'@'%' identified by 'impacta';

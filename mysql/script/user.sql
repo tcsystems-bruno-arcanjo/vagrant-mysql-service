@@ -1,1 +1,9 @@
-create user 'impacta'@'%' identified by 'impacta';
+CREATE USER IF NOT EXISTS 'impacta'@'%' IDENTIFIED BY 'impacta';
+
+CREATE DATABASE IF NOT EXISTS db_example;
+
+ALTER DATABASE db_example
+  DEFAULT CHARACTER SET utf8
+  DEFAULT COLLATE utf8_general_ci;
+
+GRANT ALL PRIVILEGES ON db_example.* TO 'impacta'@'%';
